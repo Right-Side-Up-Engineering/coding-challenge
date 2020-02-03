@@ -5,17 +5,17 @@ Design a REST API endpoint that provides auto-complete suggestions from a list o
 ## Overview
 
 * The endpoint is exposed at /suggestions
-* The partial (or complete) search team is passed as a query string parameter ‘q’
+* The partial (or complete) search term is passed as a query string parameter ‘q’
 * The contact can optionally be filtered by query string parameters ‘min_rate’ and ‘verified_skills’
 * The endpoint returns a JSON response with an array of scored suggested matches
 	* The suggestions are sorted by descending score
 	* Each suggestion has a score between 0 and 1 (inclusive) indicating confidence in the suggestion (1 is most confident)
-	* Each suggestion has a name which can be used to disambiguate between similarly named contacts
+	* Each suggestion has an ID which can be used to disambiguate between similarly named contacts.
 	* Each suggestion has a contact email address
 
 ## Requirements
 
-* You can use the language and technology of your choosing. Feel free to use something you’re comfortable with.
+* Please use Python. Use any tools you'd like in addition to Python that you feel comfortable with.
 * End result should be deployed on a public cloud (there are free tiers available).
 
 ## Sample Responses 
@@ -30,18 +30,17 @@ Design a REST API endpoint that provides auto-complete suggestions from a list o
     "guid": "a421d5c8-9da1-4dfa-99be-683d351e0021",
     "min_rate": "$268.45",
     "age": 31,
-    "eyeColor": "green",
-    "first_name": "Juliana",
+    "first_name": "Brandon",
     "last_name": "Dunn",
-    "contact_email": "julianadunn@codax.com",
+    "contact_email": "brandondunn@gmail.com",
     "verified_skills": [
-      "commodo",
-      "officia",
-      "do",
-      "consectetur",
-      "laboris",
-      "ullamco",
-      "cillum"
+      "facebook_marketing",
+      "lifecycle_marketing",
+      "conversion_rate_optimization",
+      "quantitative_research",
+      "customer_acquisition_strategy",
+      "analytics_infrastructure",
+      "go_to_market_strategy"
     ],
     "score": 0.6729
   },
@@ -54,15 +53,14 @@ Design a REST API endpoint that provides auto-complete suggestions from a list o
     "eyeColor": "blue",
     "first_name": "Lenora",
     "last_name": "Delacruz",
-    "contact_email": "lenoradelacruz@codax.com",
+    "contact_email": "lenoradelacruz@yahoo.com",
     "verified_skills": [
-      "irure",
-      "dolore",
-      "anim",
-      "deserunt",
-      "esse",
-      "voluptate",
-      "magna"
+      "facebook_marketing",
+      "lifecycle_marketing",
+      "conversion_rate_optimization",
+      "podcast_advertising",
+      "linkedin_advertising",
+      "user_referral_programs"
     ],
     "score": 0.6677
   },
@@ -77,13 +75,12 @@ Design a REST API endpoint that provides auto-complete suggestions from a list o
     "last_name": "Ruiz",
     "contact_email": "elsaruiz@codax.com",
     "verified_skills": [
-      "pariatur",
-      "officia",
-      "occaecat",
-      "officia",
-      "consectetur",
-      "deserunt",
-      "ullamco"
+     "lifecycle_marketing",
+      "conversion_rate_optimization",
+      "podcast_advertising",
+      "facebook_organic",
+      "facebook_paid_advertising",
+      "mailchimp"
     ],
     "score": 0.3374
   }
